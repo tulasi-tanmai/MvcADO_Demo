@@ -37,11 +37,24 @@ namespace MvcADO_Demo.Controllers
             }
             return View();
         }
+        
+
         [HttpPost]
         public IActionResult Delete(int id)
         {
             _productsRepository.DeleteProduct(id);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Update(int id, string name, decimal price)
+        {
+            if (ModelState.IsValid)
+            {
+                _productsRepository.UpdateProduct(id, name, price);
+                return RedirectToAction("Index");
+            }
+            return View();
         }
 
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvcADO_Demo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96ccb827f7fdee47cb140fd08757a06d6afa76c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36f3d3deb8224a607d963a3c7f3dfd42ba450429")]
 [assembly: System.Reflection.AssemblyProductAttribute("MvcADO_Demo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MvcADO_Demo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

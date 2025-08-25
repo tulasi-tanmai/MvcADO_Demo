@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Products - Update";}
+
+
+ <form asp-action="Update" asp-controller="Products" method="post">
+                    <div><label>IDProduct </label>
+    <input type="number" name="id"  />
+    </div>
+
+    <div>
+        <label for="name">Product Name</label>
+        <input type="text" name="name"  />
+    </div>
+
+    <div>
+        <label for="price">Price</label>
+        <input type="number"  name="price"  required />
+    </div>
+
+    <button type="submit">Update</button>
+    </form>
+</div>

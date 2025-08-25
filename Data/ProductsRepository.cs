@@ -42,6 +42,32 @@ public class ProductsRepository
                 cmd.ExecuteNonQuery();
             }
         }
+        public void UpdateProduct(int id, string name, decimal price)
+    {
+        using (SqlConnection conn = new SqlConnection(_dbConnection.ConnectionString))
+        {
+            string query = "UPDATE Products SET Name = @name, Price = @price WHERE Id = @id";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@price", price);
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+        }
+    }
+    // public void UpdateProduct(int id, string name, decimal price)
+    // {
+    //     using var connection = _dbConnection;
+    //     using var command = connection.CreateCommand();
+    //     command.CommandText = "UPDATE Products SET Name = @name, Price = @price WHERE Id = @id";
+    //     command.Parameters.Add(new SqlParameter("@id", id));
+    //     command.Parameters.Add(new SqlParameter("@name", name));
+    //     command.Parameters.Add(new SqlParameter("@price", price));
+    //     connection.Open();
+    //     command.ExecuteNonQuery();
+    //     connection.Close();
+    // }
 
     public DataSet GetProducts()
     {
