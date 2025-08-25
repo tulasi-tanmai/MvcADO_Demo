@@ -149,3 +149,4 @@ C:\Users\HP\source\repos\day-30\MvcADO_Demo\obj\Debug\net9.0\refint\MvcADO_Demo.
 C:\Users\HP\source\repos\day-30\MvcADO_Demo\obj\Debug\net9.0\MvcADO_Demo.pdb
 C:\Users\HP\source\repos\day-30\MvcADO_Demo\obj\Debug\net9.0\MvcADO_Demo.genruntimeconfig.cache
 C:\Users\HP\source\repos\day-30\MvcADO_Demo\obj\Debug\net9.0\ref\MvcADO_Demo.dll
+C:\Users\HP\source\repos\day-30\MvcADO_Demo\obj\Debug\net9.0\MvcADO_Demo.sourcelink.json
