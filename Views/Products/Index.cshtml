@@ -1,0 +1,35 @@
+@using MvcADO_Demo.Models
+@using System.Data
+@using System.Data.SqlClient
+@{ViewData["Title"] = "Products";}
+<h2> Products</h2>
+<a href="/Products/Create" class="btn btn-secondary mb-3"> Add Product</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Tables.Count > 0)
+        {
+            var productsTable = Model.Tables[0];
+            foreach (DataRow row in productsTable.Rows)
+            {
+                <tr>
+                    <td>@row["Id"]</td>
+                    <td>@row["Name"]</td>
+                    <td>@row["Price"]</td>
+                    <td>
+                <form asp-action="Delete" asp-controller="Products" method="post">
+                    <input type="hidden" name="id" value="@row["Id"]" />
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
